@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <config/timer_config.h>
+#include <traffic_light_controller.h>
 #include <traffic_light_timer.h>
 
 namespace {
@@ -7,7 +8,7 @@ namespace {
 hw_timer_t* trafficLightTimer = nullptr;
 
 void ARDUINO_ISR_ATTR onTrafficLightTimer() {
-  // Логіку перемикання станів буде додано наступним кроком.
+  handleTrafficLightTimerTick();
 }
 
 }  // namespace
