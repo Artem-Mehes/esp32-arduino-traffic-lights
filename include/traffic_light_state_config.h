@@ -18,6 +18,12 @@ enum class TrafficLightMode : uint8_t {
   Blinking,
 };
 
+// Загальний режим роботи світлофора.
+enum class TrafficLightOperatingMode : uint8_t {
+  Normal,
+  NightYellowBlinking,
+};
+
 // Один етап циклу світлофора.
 struct TrafficLightPhase {
   TrafficLightState state;
