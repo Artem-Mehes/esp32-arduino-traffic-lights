@@ -4,7 +4,7 @@
 #include <stdint.h>
 
 // Піни світлодіодів у порядку: зелений, жовтий, червоний.
-constexpr uint8_t ledPins[] = {4, 5, 6};
+constexpr uint8_t ledPins[] = {4, 7, 17};
 constexpr uint8_t ledCount = sizeof(ledPins) / sizeof(ledPins[0]);
 
 constexpr uint8_t greenLedIndex = 0;
