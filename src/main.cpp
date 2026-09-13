@@ -1,18 +1,18 @@
 #include <Arduino.h>
-
-// put function declarations here:
-int myFunction(int, int);
+#include <config/led_config.h>
+#include <traffic_light_state_config.h>
+#include <traffic_light_timer.h>
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  for (uint8_t i = 0; i < ledCount; ++i) {
+    pinMode(ledPins[i], OUTPUT);
+  }
+
+  if (!initializeTrafficLightTimer()) {
+    return;
+  }
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
 }
